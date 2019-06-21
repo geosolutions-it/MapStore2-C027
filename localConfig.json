@@ -371,7 +371,11 @@
                   "declineUrl" : "http://www.google.com"
                   }
               },
-              "OmniBar", "Login", "Save", "SaveAs", "BurgerMenu", "Expander", "Undo", "Redo", "SearchServicesConfig", "ShapeFile"
+              "OmniBar", "Login", "Save", "SaveAs", "BurgerMenu", "Expander", "Undo", "Redo", "SearchServicesConfig", "ShapeFile",
+              "WidgetsBuilder", "Widgets", "WidgetsTray",
+              "Timeline",
+              "Playback",
+              "FeedbackMask"
           ],
           "embedded": [{
                   "name": "Map",
@@ -473,7 +477,8 @@
                       }
                   }
               }, "Cookie",
-              "OmniBar"
+              "OmniBar",
+              "FeedbackMask"
           ],
           "common": [{
               "name": "OmniBar",
@@ -490,8 +495,7 @@
             {
                 "name": "CreateNewMap",
                 "cfg": {
-                    "allowedRoles": ["ADMIN"],
-                    "showNewDashboard": false
+                    "allowedRoles": ["ADMIN"]
                 }
             },
             {
@@ -502,12 +506,61 @@
                   "limit": 12
                 }
               }
+            }, {
+              "name": "Dashboards",
+              "cfg": {
+                "mapsOptions": {
+                  "start": 0,
+                  "limit": 12
+                },
+                "fluid": true
+              }
             }, "Footer", {
             "name": "Cookie",
             "cfg": {
               "externalCookieUrl" : "",
               "declineUrl" : "http://www.google.com"
             }
+          }],
+          "dashboard": [{
+              "name": "OmniBar",
+              "cfg": {
+                  "containerPosition": "header",
+                  "className": "navbar shadow navbar-home"
+              }
+          }, "Login", "Language", "NavMenu", "Attribution", "Home", {
+            "name": "DashboardEditor",
+            "cfg": {
+               "catalog": {
+                "url": "https://demo.geo-solutions.it/geoserver/csw",
+                "type": "csw",
+                "title": "Demo CSW Service",
+                "autoload": true
+              },
+              "containerPosition": "columns"
+            }
+          }, {
+            "name": "QueryPanel",
+            "cfg": {
+              "toolsOptions": {
+                "hideCrossLayer": true,
+                "hideSpatialFilter": true
+              },
+              "containerPosition": "columns"
+            }
+          }, "BurgerMenu", "Dashboard", "Notifications", {
+              "name": "Tutorial",
+              "cfg": {
+                  "allowClicksThruHole": false,
+                  "containerPosition": "header",
+                  "preset": "dashboard_tutorial"
+              }
+          },
+          {
+              "name": "FeedbackMask",
+              "cfg": {
+                  "containerPosition": "header"
+              }
           }],
           "manager": ["Header", "Redirect", "Manager", "Home", "UserManager", "GroupManager", "Footer"]
       }
