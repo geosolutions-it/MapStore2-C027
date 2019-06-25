@@ -5,7 +5,6 @@
         "http://sr-vm113-sitgn1",
         "http://sr-vm277-sitgn2",
         "http://datigis.comune.intranet",
-        "http://datigis.comune.fi.it",
         "http://datigis2.comune.intranet"]
     },
     "geoStoreUrl": "/mapstore2/rest/geostore/",
