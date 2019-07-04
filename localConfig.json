@@ -490,7 +490,7 @@
               "cfg": {
                   "name": " "
               }
-            }, "MapSearch",  "GridContainer",
+            }, "MapSearch", "ContentTabs",
             {
                 "name": "CreateNewMap",
                 "cfg": {
